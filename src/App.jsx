@@ -1,2 +1,11 @@
-const App = () => <h1>Hello, Hi, good Morning!</h1>;
+//Global Styles
+import Routes from "./routes";
+import GlobalStyles from "./styles/GlobalStyles";
+
+const App = () => (
+  <>
+    <GlobalStyles />
+    <Routes />
+  </>
+);
 export default App;

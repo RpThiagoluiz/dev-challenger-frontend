@@ -9,7 +9,9 @@ export const Container = styled.div`
   justify-content: space-around;
 `;
 
-export const ImageLogo = styled.img``;
+export const ImageLogo = styled.img`
+  margin-top: 10em;
+`;
 
 export const InfoSpedy = styled.div`
   color: #d75745;

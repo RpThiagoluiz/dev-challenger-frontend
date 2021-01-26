@@ -1,2 +1,2 @@
 `Init`
-[] - Template Pages
+[] - Template Pages /\* rest template for createNews

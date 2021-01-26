@@ -9,7 +9,7 @@ const AuthProvider = ({ children }) => {
   });
 
   const singIn = (user, pass) => {
-    if (user === "admin" && pass === "1234") {
+    if (user === "user" && pass === "1234") {
       localStorage.setItem("@spedy-admin-news:logged", "true");
       setLogged(true);
     } else {

@@ -1,17 +1,13 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  overflow-y: hidden;
-`;
+export const Container = styled.div``;
 
 export const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  padding: 25px;
-  margin-top: 30px;
-
+  padding: 50px;
   > h1 {
     font-size: 48px;
     color: #d75745;
@@ -58,7 +54,6 @@ export const Main = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-
   margin: 60px;
 `;
 

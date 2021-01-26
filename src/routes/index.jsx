@@ -1,11 +1,13 @@
 import { BrowserRouter } from "react-router-dom";
-
 //Routes
-import App from "./app.routes";
-
-const Routes = () => (
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-);
+import AppRoutes from "./app.routes";
+import AuthRoutes from "./auth.routes";
+//AuthHook
+const Routes = () => {
+  return (
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  );
+};
 export default Routes;

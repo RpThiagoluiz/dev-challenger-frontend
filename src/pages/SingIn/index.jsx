@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 //Auth
-
+import { useAuth } from "../../hooks/auth";
 //Styles
 import { Container, Logo, Form, FormTitle, Input, Button } from "./styles";
 //Image
@@ -11,13 +11,15 @@ const SingIn = () => {
   const [user, setUser] = useState("");
   const [pass, setPass] = useState("");
 
+  const { singIn } = useAuth();
+
   return (
     <Container>
       <Logo>
         <img src={appIcon} alt="Logo do app" />
         <h1>Spedy News</h1>
       </Logo>
-      <Form onSubmit={() => {}}>
+      <Form onSubmit={() => singIn(user, pass)}>
         <FormTitle>Entrar</FormTitle>
         <Input
           required

@@ -10,7 +10,7 @@ const AuthRoutes = () => (
   <Switch>
     <Route path="/" exact component={HomePage} />
     <Route path="/classificados" exact component={News} />
-    <Route path="/criar/classificados" component={SingIn} />
+    <Route path="/classificados/criar" component={SingIn} />
   </Switch>
 );
 export default AuthRoutes;

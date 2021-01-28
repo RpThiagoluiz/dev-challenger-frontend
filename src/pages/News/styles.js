@@ -57,6 +57,8 @@ export const Main = styled.div`
   margin: 60px;
 `;
 
+export const NewContent = styled.div``;
+
 export const Footer = styled.div`
   background-color: #f9bb4b;
 

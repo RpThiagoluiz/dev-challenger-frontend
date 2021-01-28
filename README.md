@@ -1,2 +1,2 @@
 `Init`
-[] - Template Pages /\* rest template for createNews
+[] - Animation, designer responsivo, layout dos cards.

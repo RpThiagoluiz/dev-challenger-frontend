@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 //Components
 import MainHeader from "../../components/MainHeader";
@@ -17,8 +18,11 @@ const CreateNews = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
-  const handleSubmitForm = (e) => {
-    //async/await q ela vai postar no back-end
+  const handleSubmitForm = async (e) => {
+    await axios.post("http://localhost:3333/classificados/criar", {
+      title,
+      description,
+    });
     e.preventDefault();
     console.log(title, description);
     alert(`Classificado cadastrado com Sucesso!`);

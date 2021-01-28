@@ -4,8 +4,22 @@ import { Link } from "react-router-dom";
 
 //Api
 import api from "../../services/api";
+//Utils
+import formatDate from "../../utils/formatDate";
 //Styles
-import { Container, Header, Main, NewContent, Footer } from "./styles";
+import {
+  Container,
+  Header,
+  Main,
+  NewContent,
+  ButtonContainer,
+  ButtonEdit,
+  ButtonDelete,
+  Footer,
+} from "./styles";
+//Icons
+import deleteIcon from "../../assets/images/delete.svg";
+import editIcon from "../../assets/images/edit.svg";
 
 const News = () => {
   const [apiCall, setApiCall] = useState([]);
@@ -18,9 +32,11 @@ const News = () => {
   }, [apiCall]);
 
   const handleDeleteButton = async (id, e) => {
-    await axios.delete(`/classificado/delete/${id}`);
+    await axios.delete(`http://localhost:3333/classificado/delete/${id}`);
     console.log(`clicado ${id}`);
   };
+
+  //updateNews
 
   return (
     <Container>
@@ -34,8 +50,16 @@ const News = () => {
         {apiCall.map((el) => (
           <NewContent key={el.id}>
             <h3>{el.title}</h3>
-            <small>{el.createAt}</small>
+            <small>{formatDate(el.createAt)}</small>
             <p>{el.description}</p>
+            <ButtonContainer>
+              <ButtonEdit>
+                <img src={editIcon} alt="Editar" />
+              </ButtonEdit>
+              <ButtonDelete onClick={(e) => handleDeleteButton(el.id, e)}>
+                <img src={deleteIcon} alt="deletar" />
+              </ButtonDelete>
+            </ButtonContainer>
           </NewContent>
         ))}
       </Main>

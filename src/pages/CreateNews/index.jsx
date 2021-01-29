@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 //Components
 import MainHeader from "../../components/MainHeader";
@@ -15,19 +16,19 @@ import {
 } from "./styles";
 
 const CreateNews = () => {
+  const history = useHistory();
+
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
   const handleSubmitForm = async (e) => {
-    await axios.post("http://localhost:3333/classificados/criar", {
-      title,
-      description,
-    });
     e.preventDefault();
-    console.log(title, description);
+    await axios.post("http://localhost:3333/classificados/criar", {
+      title: title,
+      description: description,
+    });
     alert(`Classificado cadastrado com Sucesso!`);
-    setTitle("");
-    setDescription("");
+    history.push("/classificados");
   };
   return (
     <Container>

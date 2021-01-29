@@ -22,7 +22,11 @@ export const Form = styled.form`
 
   border-radius: 12px;
 
-  background-color: #4a4e4d;
+  background: rgba(74, 74, 74, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border-radius: 10px;
 `;
 
 export const FormTitle = styled.h2`

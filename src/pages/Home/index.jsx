@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 const HomePage = () => (
   <Container>
     <InfoSpedy>
-      <h1>Spedy - Dev Test</h1>
+      <h1>Dev Test</h1>
       <p>
         Acompanhe os <Link to="/classificados">Classificados</Link> mais
         recentes.
       </p>
 
       <p>
-        <Link to="/criar/classificados">Criei</Link> novos classificados, apos
+        <Link to="/classificados/criar">Criei</Link> novos classificados, apos
         se identificar no site.
       </p>
     </InfoSpedy>

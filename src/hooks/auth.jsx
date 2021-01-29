@@ -20,6 +20,7 @@ const AuthProvider = ({ children }) => {
   const signOut = () => {
     localStorage.removeItem("@spedy-admin-news:logged");
     setLogged(false);
+    //Adc link para a home.
   };
 
   return (

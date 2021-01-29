@@ -12,14 +12,11 @@ import {
   Header,
   Main,
   NewContent,
-  ButtonContainer,
-  ButtonEdit,
   ButtonDelete,
   Footer,
 } from "./styles";
 //Icons
 import deleteIcon from "../../assets/images/delete.svg";
-import editIcon from "../../assets/images/edit.svg";
 
 const News = () => {
   const [apiCall, setApiCall] = useState([]);
@@ -52,19 +49,15 @@ const News = () => {
             <h3>{el.title}</h3>
             <small>{formatDate(el.createAt)}</small>
             <p>{el.description}</p>
-            <ButtonContainer>
-              <ButtonEdit>
-                <img src={editIcon} alt="Editar" />
-              </ButtonEdit>
-              <ButtonDelete onClick={(e) => handleDeleteButton(el.id, e)}>
-                <img src={deleteIcon} alt="deletar" />
-              </ButtonDelete>
-            </ButtonContainer>
+
+            <ButtonDelete onClick={(e) => handleDeleteButton(el.id, e)}>
+              <img src={deleteIcon} alt="deletar" />
+            </ButtonDelete>
           </NewContent>
         ))}
       </Main>
       <Footer>
-        <h3>15 classificados</h3>
+        <h3>{apiCall.length} classificados</h3>
       </Footer>
     </Container>
   );

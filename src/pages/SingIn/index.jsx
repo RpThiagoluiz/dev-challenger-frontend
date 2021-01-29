@@ -17,7 +17,7 @@ const SingIn = () => {
     <Container>
       <Logo>
         <img src={appIcon} alt="Logo do app" />
-        <h1>Spedy News</h1>
+        <h1>News - DevFrontEnd</h1>
       </Logo>
       <Form onSubmit={() => singIn(user, pass)}>
         <FormTitle>Entrar</FormTitle>

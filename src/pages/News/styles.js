@@ -53,17 +53,34 @@ export const Main = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   margin: 60px;
 `;
 
 export const NewContent = styled.div`
   width: 350px;
-  min-height: 150px;
+  height: 300px;
 
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: left;
+
+  overflow-y: auto;
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 2px 10px 0 rgba(45, 117, 187, 0.4);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+
+    border-radius: 10px;
+  }
 
   margin: 20px;
   padding: 25px;
@@ -71,8 +88,7 @@ export const NewContent = styled.div`
   border-radius: 12px;
 
   color: #0f0f0f;
-  background-color: #d3d1b6;
-
+  border: 4px solid #d3d1b6;
   > h3 {
     padding: 10px;
     &:after {
@@ -88,33 +104,11 @@ export const NewContent = styled.div`
   }
 `;
 
-export const ButtonContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-
-export const ButtonEdit = styled.button`
-  width: 36px;
-  height: 36px;
-
-  border-radius: 5px;
-  padding: 2px;
-  background-color: #00b712;
-  background-image: linear-gradient(315deg, #00b712 0%, #5aff15 74%);
-
-  opacity: 0.5;
-  transition: opacity ease-in 0.2s;
-  > img {
-    width: 24px;
-    height: 24px;
-  }
-
-  &:hover {
-    opacity: 1;
-  }
-`;
-
 export const ButtonDelete = styled.button`
+  position: relative;
+  left: 250px;
+  bottom: 10px;
+
   width: 36px;
   height: 36px;
 

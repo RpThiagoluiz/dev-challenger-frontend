@@ -21,7 +21,6 @@ const formatDate = (date) => {
       : `0${dateFormatted.getDate()}`; //acrescenter o 0 se for maior que nove
   const month = monthNames[dateFormatted.getMonth()]; //mes comeca apartir do mes 0
   const year = dateFormatted.getFullYear();
-  // UTC - const time = dateFormatted.get
 
   return `${day} de ${month} de ${year}`;
 };

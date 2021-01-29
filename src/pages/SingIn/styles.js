@@ -18,16 +18,18 @@ export const Logo = styled.div`
 
   margin-bottom: 30px;
 
-  > h1 {
-    color: #fff;
-    margin-left: 7px;
+  > a {
+    > img {
+      width: 42px;
+      height: 42px;
+
+      margin-top: -10px;
+    }
   }
 
-  > img {
-    width: 42px;
-    height: 42px;
-
-    margin-top: -10px;
+  > h1 {
+    color: #fff;
+    margin-left: 9px;
   }
 `;
 export const Form = styled.form`

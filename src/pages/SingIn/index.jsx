@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 //Auth
 import { useAuth } from "../../hooks/auth";
@@ -16,7 +17,9 @@ const SingIn = () => {
   return (
     <Container>
       <Logo>
-        <img src={appIcon} alt="Logo do app" />
+        <Link to="/classificados">
+          <img src={appIcon} alt="Logo do app" />
+        </Link>
         <h1>News - DevFrontEnd</h1>
       </Logo>
       <Form onSubmit={() => singIn(user, pass)}>

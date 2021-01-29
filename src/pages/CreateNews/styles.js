@@ -22,15 +22,15 @@ export const Form = styled.form`
 
   border-radius: 12px;
 
-  background: rgba(74, 74, 74, 0.5);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background: rgba(250, 250, 250, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(74, 74, 74, 0.5);
   backdrop-filter: blur(1.5px);
   -webkit-backdrop-filter: blur(1.5px);
   border-radius: 10px;
 `;
 
 export const FormTitle = styled.h2`
-  color: #fff;
+  color: #0f0f0f;
   text-transform: uppercase;
   font-size: 36px;
   font-weight: 600;

@@ -1,3 +1,4 @@
+import { useHistory } from "react-router-dom";
 //Custom-Hook
 import { useAuth } from "../../hooks/auth";
 //Components
@@ -10,6 +11,7 @@ import singOutIcon from "../../assets/images/singout.svg";
 
 const MainHeader = () => {
   const { signOut } = useAuth();
+
   return (
     <Header>
       <ButtonBackPage />

@@ -33,7 +33,7 @@ export const InfoSpedy = styled.div`
   }
   > p {
     color: #0f0f0f;
-    a {
+    > a {
       color: #2d75bb;
       text-decoration: none;
 

@@ -17,7 +17,7 @@ const SingIn = () => {
   return (
     <Container>
       <Logo>
-        <Link to="/classificados">
+        <Link to="/">
           <img src={appIcon} alt="Logo do app" />
         </Link>
         <h1>News - DevFrontEnd</h1>

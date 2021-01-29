@@ -36,12 +36,14 @@ const CreateNews = () => {
       <Form onSubmit={handleSubmitForm}>
         <FormTitle>Classificado</FormTitle>
         <InputTitle
+          required
           type="text"
           placeholder="Titulo"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
         <TextArea
+          required
           rows={10}
           type="text"
           placeholder="Descrição"

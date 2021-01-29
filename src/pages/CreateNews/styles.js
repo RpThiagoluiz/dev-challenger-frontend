@@ -27,6 +27,13 @@ export const Form = styled.form`
   backdrop-filter: blur(1.5px);
   -webkit-backdrop-filter: blur(1.5px);
   border-radius: 10px;
+
+  @media (max-width: 480px) {
+    width: 360px;
+  }
+  @media (max-width: 360px) {
+    width: 240px;
+  }
 `;
 
 export const FormTitle = styled.h2`
@@ -43,6 +50,9 @@ export const FormTitle = styled.h2`
     width: 100%;
     margin: 2px auto;
     border-bottom: 2px solid #d75745;
+  }
+  @media (max-width: 360px) {
+    font-size: 24px;
   }
 `;
 

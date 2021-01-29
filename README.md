@@ -5,3 +5,5 @@
 
 COLOCAR USER 1234
 TypeScript
+porque optei pelo styled-components
+tela de logint e o porq

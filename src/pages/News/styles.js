@@ -45,6 +45,27 @@ export const Header = styled.div`
       }
     }
   }
+  @media (max-width: 560px) {
+    > a {
+      > button {
+        position: absolute;
+        top: 120px;
+        right: 20px;
+
+        width: 64px;
+        height: 64px;
+
+        padding: 20px;
+
+        overflow: hidden;
+      }
+    }
+  }
+  @media (max-width: 280px) {
+    > h1 {
+      font-size: 24px;
+    }
+  }
 `;
 
 export const Main = styled.div`
@@ -102,6 +123,23 @@ export const NewContent = styled.div`
   > p {
     padding: 12px;
   }
+  @media (max-width: 1280px) {
+    width: 330px;
+  }
+  @media (max-width: 360px) {
+    font-size: 15px;
+  }
+  @media (max-width: 280px) {
+    width: 100%;
+    height: 280px;
+    > small {
+      font-size: 8px;
+    }
+    > p {
+      font-size: 12px;
+      padding: 5px;
+    }
+  }
 `;
 
 export const ButtonDelete = styled.button`
@@ -127,6 +165,10 @@ export const ButtonDelete = styled.button`
 
   &:hover {
     opacity: 1;
+  }
+  @media (max-width: 420px) {
+    bottom: 0;
+    left: 10px;
   }
 `;
 

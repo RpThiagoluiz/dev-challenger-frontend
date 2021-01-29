@@ -30,4 +30,10 @@ export const Header = styled.div`
       padding: 5px;
     }
   }
+  @media (max-width: 420px) {
+    font-size: 12px;
+  }
+  @media (max-width: 280px) {
+    font-size: 10px;
+  }
 `;

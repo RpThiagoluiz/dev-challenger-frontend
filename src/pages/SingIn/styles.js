@@ -41,6 +41,10 @@ export const Form = styled.form`
   background-color: #4a4e4d;
 
   box-shadow: 3px 3px 10px black;
+
+  @media (max-width: 280px) {
+    width: 260px;
+  }
 `;
 export const FormTitle = styled.h2`
   text-align: center;

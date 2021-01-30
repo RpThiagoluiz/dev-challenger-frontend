@@ -1,4 +1,21 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const animate = keyframes`
+0%{
+  transform: translateX(-100px);
+  opacity:0;
+}
+
+50% {
+  opacity:0.3;
+}
+
+100% {
+  transform: translateX(0px);
+  opacity:1;
+}
+
+`;
 
 export const Container = styled.div``;
 
@@ -110,6 +127,8 @@ export const NewContent = styled.div`
 
   color: #0f0f0f;
   border: 4px solid #d3d1b6;
+
+  animation: ${animate} 0.9s ease-in;
   > h3 {
     padding: 10px;
     &:after {

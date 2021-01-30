@@ -1,4 +1,21 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const animate = keyframes`
+0%{
+  transform: translatey(-100px);
+  opacity:0;
+}
+
+50% {
+  opacity:0.3;
+}
+
+100% {
+  transform: translateY(0px);
+  opacity:1;
+}
+
+`;
 
 export const Container = styled.div`
   display: flex;
@@ -27,6 +44,8 @@ export const Form = styled.form`
   backdrop-filter: blur(1.5px);
   -webkit-backdrop-filter: blur(1.5px);
   border-radius: 10px;
+
+  animation: ${animate}.9s ease-in-out;
 
   @media (max-width: 480px) {
     width: 360px;
